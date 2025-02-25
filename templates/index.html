@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CV Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>CV Generator</h1>
+    <form id="cvForm" action="/generate_cv" method="post" enctype="multipart/form-data">
+        <h2>Etat Civil</h2>
+        <label for="photo">Photo:</label>
+        <input type="file" id="photo" name="photo" accept="image/*"><br><br>
+
+        <label for="nom">Nom:</label>
+        <input type="text" id="nom" name="nom" required><br><br>
+
+        <label for="prenom">Prénom:</label>
+        <input type="text" id="prenom" name="prenom" required><br><br>
+
+        <label for="date_naissance">Date de naissance:</label>
+        <input type="date" id="date_naissance" name="date_naissance" required><br><br>
+
+        <label for="lieu_naissance">Lieu de naissance:</label>
+        <input type="text" id="lieu_naissance" name="lieu_naissance" required><br><br>
+
+        <label for="adresse">Adresse:</label>
+        <textarea id="adresse" name="adresse" required></textarea><br><br>
+
+        <label for="nationalite">Nationalité:</label>
+        <input type="text" id="nationalite" name="nationalite" required><br><br>
+
+        <label for="situation_familiale">Situation familiale:</label>
+        <input type="text" id="situation_familiale" name="situation_familiale" required><br><br>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="tel">Tel:</label>
+        <input type="tel" id="tel" name="tel" required><br><br>
+
+        <h2>Experiences Professionnelles</h2>
+        <label for="stage">Stage au sein de:</label>
+        <input type="text" id="stage" name="stage"><br><br>
+
+        <label for="travail">Travail au sein de:</label>
+        <input type="text" id="travail" name="travail"><br><br>
+
+        <h2>Formations et Diplômes Obtenus</h2>
+        <label for="licence">Licence en (20../20..):</label>
+        <input type="text" id="licence" name="licence"><br><br>
+
+        <label for="diplome">Diplôme de (20../20..):</label>
+        <input type="text" id="diplome" name="diplome"><br><br>
+
+        <label for="bac">Baccalauréat en... (2024/2025):</label>
+        <input type="text" id="bac" name="bac"><br><br>
+
+        <h2>Langues</h2>
+        <label for="arabe">Arabe:</label>
+        <input type="text" id="arabe" name="arabe"><br><br>
+
+        <label for="francais">Français:</label>
+        <input type="text" id="francais" name="francais"><br><br>
+
+        <label for="anglais">Anglais:</label>
+        <input type="text" id="anglais" name="anglais"><br><br>
+
+        <h2>Activités Extra Professionnelles</h2>
+        <label for="sport">Sport:</label>
+        <input type="text" id="sport" name="sport"><br><br>
+
+        <label for="lecture">Lecture:</label>
+        <input type="text" id="lecture" name="lecture"><br><br>
+
+        <h2>Caractéristiques Personnelles</h2>
+        <label for="caracteristiques">Caractéristiques:</label>
+        <textarea id="caracteristiques" name="caracteristiques"></textarea><br><br>
+
+        <button type="submit">Generate CV and Export to PDF</button>
+    </form>
+</body>
+</html>
